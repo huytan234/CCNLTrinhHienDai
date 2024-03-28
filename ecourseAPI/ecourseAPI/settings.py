@@ -35,12 +35,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'course.apps.CourseConfig'
+    'course.apps.CourseConfig',
+    'ckeditor',
+    'ckeditor_uploader',
+    'rest_framework',
+    'drf_yasg'
 ]
+
+CKEDITOR_UPLOAD_PATH = "ckeditor/images"
 
 AUTH_USER_MODEL = 'course.User'
 
 MEDIA_ROOT = '%s/course/static/' % BASE_DIR
+
+import cloudinary
+
+cloudinary.config(
+    cloud_name="dugdiroet",
+    api_key="235464654239645",
+    api_secret="OX5rhtlGDyug7L02jDCXHqEkjEc"
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ecourseapi',
         'USER': 'root',
-        'PASSWORD': 'Admin@123',
+        'PASSWORD': 'Huytan@2304',
         'HOST': ''  # mặc định localhost
     }
 }
