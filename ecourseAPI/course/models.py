@@ -70,11 +70,14 @@ class Interaction(BaseModel):
         abstract = True
 
 class Comment(Interaction):
+    objects = None
     content = models.CharField(max_length=255)
 
 
 
 class Like(Interaction):
+    objects = None
+
     class Meta:
         unique_together = ('lesson', 'user')
 

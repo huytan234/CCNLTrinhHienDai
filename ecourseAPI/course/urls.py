@@ -8,6 +8,7 @@ r.register('categories', views.CategoryViewSet, 'categories')
 r.register('course', views.CourseViewSet, 'Course')
 r.register('lessons', views.LessonViewSet, 'Lesson')
 r.register('users', views.UserViewSet, 'User')
+r.register('comments', views.CommentViewSet, 'comments')
 
 
 urlpatterns = [
